@@ -1,0 +1,753 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+body{
+
+    font-family:Arial,sans-serif;
+    background:#f8f9fc;
+
+}
+
+
+
+
+.container{
+
+    display:flex;
+
+}
+
+
+
+
+
+/* Sidebar */
+
+
+.sidebar{
+
+    width:170px;
+    height:100vh;
+    background:white;
+    border-right:1px solid white;
+    padding:25px 18px;
+    position:fixed;
+
+}
+
+
+
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    margin-bottom:35px;
+
+}
+
+
+
+.logo img{
+
+    width:30px;
+    height:30px;
+    margin-right:8px;
+
+}
+
+
+
+.logo h3{
+
+    font-size:15px;
+    color:#333;
+
+}
+
+
+
+.logo p{
+
+    font-size:8px;
+    color:#999;
+
+}
+
+.menu a{
+
+    text-decoration:none;
+
+}
+
+.menu p{
+
+    font-size:13px;
+    color:#555;
+    padding:10px;
+    margin-bottom:5px;
+
+}
+
+.menu p:hover{
+
+    background:#eef3ff;
+    color:#5274e8;
+    border-radius:6px;
+
+}
+
+.menu .active{
+
+    background:#eef3ff;
+    color:#5274e8;
+
+    border-radius:6px;
+
+}
+
+/* Admin Profile */
+
+.profile{
+
+    position:absolute;
+    bottom:25px;
+    left:18px;
+    width:135px;
+    height:45px;
+ border:1px solid #eeeeee;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    padding:6px;
+    background:white;
+
+}
+
+
+
+.circle{
+
+    width:28px;
+    height:28px;
+
+    background:#5274e8;
+
+    color:white;
+
+    border-radius:50%;
+
+    text-align:center;
+
+    padding-top:8px;
+
+    font-size:10px;
+
+    margin-right:8px;
+
+}
+
+
+
+.profile h5{
+
+    font-size:10px;
+
+}
+
+
+
+.profile p{
+
+    font-size:8px;
+    color:#888;
+
+}
+
+
+
+
+
+/* Main Area */
+
+
+.main{
+
+    margin-left:170px;
+
+    width:100%;
+
+    padding:45px 25px;
+
+
+}
+
+
+
+
+.main h1{
+
+    color:#5274e8;
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+}
+
+/* Dashboard Background */
+
+.dashboard-area{
+
+    background:#fafbfc;
+
+    padding:20px;
+
+}
+
+/* Top Cards */
+
+.top-cards{
+    display:flex;
+    gap:15px;
+
+}
+
+
+
+.card{
+
+    background:white;
+
+    width:25%;
+
+    height:65px;
+
+    border:1px solid #eeeeee;
+
+    border-radius:12px;
+
+    padding:14px 16px;
+
+
+}
+
+
+
+.card p{
+
+    color:#999;
+
+    font-size:11px;
+
+
+}
+
+
+
+.card h2{
+
+    font-size:20px;
+
+    color:#222;
+
+    margin-top:5px;
+
+
+}
+
+
+
+
+
+
+/* Bottom Property Cards */
+
+
+.bottom-cards{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:18px;
+
+}
+
+
+
+.big-card{
+
+    width:50%;
+
+    height:85px;
+
+    background:white;
+
+    border:1px solid #eeeeee;
+
+    border-radius:12px;
+
+    padding:16px;
+
+    position:relative;
+
+
+}
+
+
+
+.big-card h4{
+
+    font-size:13px;
+
+    color:#333;
+
+
+}
+
+
+
+.big-card h1{
+
+    font-size:28px;
+
+    margin-top:8px;
+
+}
+
+
+
+
+.big-card span{
+
+
+    position:absolute;
+
+    right:15px;
+
+    top:15px;
+
+    padding:4px 10px;
+
+    font-size:9px;
+
+    border-radius:12px;
+
+
+}
+
+
+
+
+.big-card:first-child span{
+
+    background:#e5f6eb;
+
+    color:#55a574;
+
+
+}
+
+
+
+
+.big-card:last-child span{
+
+
+    background:#fff3d8;
+
+    color:#a47c27;
+
+
+}
+
+
+
+
+
+#availableProperties{
+
+    color:#69b987;
+
+}
+
+
+
+#rentedProperties{
+
+    color:#5274e8;
+
+}
+/* ===========================
+   Managers Page
+=========================== */
+
+
+.manager-section{
+
+    display:flex;
+    gap:15px;
+
+}
+
+
+
+.manager-list{
+
+    width:65%;
+
+}
+
+
+
+.search{
+
+    width:100%;
+    height:35px;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:7px;
+    margin-bottom:12px;
+
+}
+
+
+
+
+table{
+
+    width:100%;
+    background:white;
+    border-collapse:collapse;
+    border-radius:10px;
+
+}
+
+
+
+th{
+
+    height:35px;
+    font-size:11px;
+    color:#777;
+
+}
+
+
+
+td{
+
+    height:45px;
+    font-size:12px;
+    padding:10px;
+    border-top:1px solid #eee;
+
+}
+
+
+
+
+
+.active-status{
+
+    background:#e1f5e8;
+    color:#4e9b68;
+    padding:5px 10px;
+    border-radius:15px;
+
+}
+
+
+
+
+.inactive-status{
+
+    background:#f8dddd;
+    color:#b56b6b;
+    padding:5px 10px;
+    border-radius:15px;
+
+}
+
+
+
+
+
+.manager-form{
+
+    width:235px;
+    background:#5270db;
+    padding:15px;
+    border-radius:8px;
+    margin-top:40px;
+
+}
+
+
+
+.manager-form .label{
+
+    color:white;
+    font-size:11px;
+    margin-top:10px;
+    margin-bottom:5px;
+    display:block;
+
+}
+
+
+
+.manager-form input{
+
+    width:100%;
+    height:23px;
+    border:none;
+    border-radius:3px;
+    margin-bottom:5px;
+
+}
+
+
+
+
+
+.buttons{
+
+    text-align:center;
+    margin-top:10px;
+
+}
+
+
+
+.buttons button{
+
+    padding:10px 22px;
+    border:none;
+    color:white;
+    border-radius:5px;
+    margin:5px;
+    cursor:pointer;
+
+}
+
+
+
+.new{
+
+    background:#5274e8;
+     padding:5px 10px;
+
+}
+
+
+
+.refresh{
+
+    background:#97a6d4;
+     padding:5px 10px;
+
+}
+
+
+
+.delete{
+
+    background:#c84b3c;
+     padding:5px 10px;
+
+}
+
+
+
+.save{
+
+    background:#35624b;
+     padding:5px 10px;
+
+}
+/* ===========================
+   owner pp
+=========================== */
+.manager-form textarea{
+
+    width:100%;
+    height:85px;
+    border:none;
+    border-radius:3px;
+    margin-top:5px;
+
+}
+
+/* ==========================
+   Earnings Page
+========================== */
+
+
+/* Earnings Summary Cards */
+
+
+.earning-cards{
+
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+
+}
+
+
+
+.earning-card{
+
+    width:260px;
+    height:70px;
+
+    background:white;
+
+    border:1px solid #eeeeee;
+
+    border-radius:12px;
+
+    padding:15px;
+
+}
+
+
+
+.earning-card p{
+
+    font-size:11px;
+
+    color:#999;
+
+}
+
+
+
+.earning-card h2{
+
+    font-size:22px;
+
+    color:#222;
+
+    margin-top:5px;
+
+}
+
+
+
+
+
+
+/* Transaction Table Box */
+
+
+.transaction-box{
+
+    background:white;
+
+    border:1px solid #eeeeee;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    width:100%;
+
+}
+
+
+
+.transaction-box h3{
+
+    font-size:14px;
+
+    color:#333;
+
+    margin-bottom:10px;
+
+}
+
+
+
+
+
+.transaction-box table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+
+.transaction-box th{
+
+    text-align:left;
+
+    font-size:11px;
+
+    color:#777;
+
+    height:35px;
+
+}
+
+
+
+.transaction-box td{
+
+    height:45px;
+
+    font-size:12px;
+
+    border-top:1px solid #eeeeee;
+
+    color:#555;
+
+}
+
+
+
+
+
+/* Payment Status */
+
+
+.paid{
+
+    background:#dff5e7;
+
+    color:#4c9b69;
+
+    padding:5px 12px;
+
+    border-radius:15px;
+
+    font-size:10px;
+
+}
+
+
+
+.pending{
+
+    background:#fff1d6;
+
+    color:#a17c27;
+
+    padding:5px 12px;
+
+    border-radius:15px;
+
+    font-size:10px;
+
+}
