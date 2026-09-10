@@ -448,45 +448,19 @@ td{
     font-size:12px;
     padding:10px;
     border-top:1px solid #eee;
+    text-align: center;
+    vertical-align: middle;
 
 }
-
-
-
-
-
-.active-status{
-
-    background:#e1f5e8;
-    color:#4e9b68;
-    padding:5px 10px;
-    border-radius:15px;
-
-}
-
-
-
-
-.inactive-status{
-
-    background:#f8dddd;
-    color:#b56b6b;
-    padding:5px 10px;
-    border-radius:15px;
-
-}
-
-
-
-
 
 .manager-form{
 
-    width:235px;
+    width:400px;
     background:#5270db;
     padding:15px;
     border-radius:8px;
     margin-top:40px;
+    margin-left: 40px;
 
 }
 
@@ -514,54 +488,49 @@ td{
 
 }
 
-
-
-
-
 .buttons{
-
     text-align:center;
     margin-top:10px;
-
 }
 
 
 
 .buttons button{
-
     padding:10px 22px;
     border:none;
     color:white;
     border-radius:5px;
     margin:5px;
     cursor:pointer;
-
 }
-
-
 
 .new{
 
-    background:#5274e8;
-     padding:5px 10px;
+    background:#adff6f;
+    border:0px solid;
+    border-radius: 10px;
+    padding:10px;
 
 }
 
-
-
 .refresh{
 
-    background:#97a6d4;
-     padding:5px 10px;
-
+    background:#42d1e0;
+    border:0px solid;
+    border-radius: 10px;
+    padding:10px;
+    
 }
 
 
 
 .delete{
 
-    background:#c84b3c;
-     padding:5px 10px;
+    background:#ee1207;
+    color: white;
+    border:0px solid;
+    border-radius: 10px;
+    padding:10px;
 
 }
 
@@ -569,8 +538,10 @@ td{
 
 .save{
 
-    background:#35624b;
-     padding:5px 10px;
+    background:#adff6f;
+    border:0px solid;
+    border-radius: 10px;
+    padding:10px;
 
 }
 /* ===========================
@@ -717,37 +688,36 @@ td{
 
 
 
+#refresh {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
 
-
-/* Payment Status */
-
-
-.paid{
-
-    background:#dff5e7;
-
-    color:#4c9b69;
-
-    padding:5px 12px;
-
-    border-radius:15px;
-
-    font-size:10px;
-
+#refresh button {
+    background-color: #5270db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.logout{
+    background-color:red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    /* padding: 10px 20px; */
+    cursor: pointer;
+    width: 150%;
+    height: 100%;
 }
 
 
-
-.pending{
-
-    background:#fff1d6;
-
-    color:#a17c27;
-
-    padding:5px 12px;
-
-    border-radius:15px;
-
-    font-size:10px;
-
+.manager-list table th,
+.manager-list table td {
+    text-align: center; 
+    vertical-align: middle;  
 }
+

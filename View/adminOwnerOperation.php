@@ -40,16 +40,16 @@
             <p>Earnings</p>
           </a>
         </div>
+        
+      <div class="profile">
+        <div class="circle">AD</div>
 
-        <div class="profile">
-          <div class="circle">AD</div>
-
-          <div>
-            <h5>Admin Supervisor</h5>
-
-            <p>admin@rentease.com</p>
-          </div>
+        <div>
+          <form action="../controller/logoutHandler.php">
+            <button class="logout">Log Out</button>
+          </form>
         </div>
+      </div>
       </div>
 
       <!-- Main Area -->
