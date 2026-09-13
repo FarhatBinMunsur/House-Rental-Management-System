@@ -1,3 +1,4 @@
+
 <html>
 
 <head>
@@ -129,7 +130,7 @@
         </div>
 
 
-        <form action="signupHandler.php" method="post">
+        <form action="controller/signupHandler.php" method="post">
             <label for="">Full Name</label>
             <br>
             <input type="text" name="fullname" id="fullname" placeholder="Enter your full name">
@@ -155,9 +156,16 @@
             <textarea name="address" id="address" placeholder="Enter your address" rows="3"></textarea>
             <br><br>
 
+            <label for="userRole">I am a </label>
+            <input type="radio" name="userRole" id="" value="client" >Client
+            <input type="radio" name="userRole" id="" value="owner" style="margin-left:20px">House-Owner
+            <br><br>
+
             <?php
             if (isset($_SESSION['signuperrormsg']))
-                echo "<span style='color:red; display:block;text-align:center' >" . $_SESSION['errormsg'] . "</span><br>" ?>
+                echo "<span style='color:red; display:block;text-align:center' >" . $_SESSION['signuperrormsg'] . "</span><br>" ;
+                unset($_SESSION['signuperrormsg']);
+            ?>
 
                 <input type="submit" name="sbmt" id="sbmt" value="Create account">
                 <br>

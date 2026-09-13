@@ -14,13 +14,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     $user = new User();
-    $userData = $user->loginCheck($email, $pass);
+    $userData = $user->loginCheck($email, $pass);       //returned userRole, userName
     
     if ($userData) {
+        
+        unset($_SESSION['errormsg']);
         $_SESSION['username'] = $userData['userName'];
         $_SESSION['userId'] = $userData['userID'];
         $_SESSION['userRole'] = $userData['userRole'];
-        unset($_SESSION['errormsg']);
 
         // // Route based on role
         // if ($userData['userRole'] === 'admin') {
