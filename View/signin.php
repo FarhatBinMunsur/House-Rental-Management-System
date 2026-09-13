@@ -129,9 +129,16 @@
             <br>
             <?php
             
-            if (isset($_SESSION['errormsg']))
-                echo "<span style='color:red; display:block;text-align:center' >" . $_SESSION['errormsg'] . "</span><br>" ?>
+            if (isset($_SESSION['errormsg'])){
+                echo "<span style='color:red; display:block;text-align:center' >" . $_SESSION['errormsg'] . "</span><br>" ;
+            }   
 
+             if (isset($_SESSION['fpasssuccess'])){
+                echo "<span style='color:red; display:block;text-align:center' >" . $_SESSION['fpasssuccess'] . "</span><br>" ;  
+            } 
+            
+            ?>
+            
                 <input type="submit" name="sbmt" id="sbmt" value="Sign in">
                 <br>
                 <p class="signuplink">Don't have an account? <a href="index.php?page=signup"

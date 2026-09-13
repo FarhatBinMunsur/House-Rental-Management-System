@@ -62,15 +62,15 @@ body{
 
     
     <div class="fpass">
-        <form action="forgotPassHandler.php" method="post">
+        <form action="controller/forgotPassHandler.php" method="post">
             <h1 class="rp">Reset Password</h1>
             Email:
             <br>
-            <input type="text" name="email" id="" class="email">
+            <input type="text" name="email" id="" class="email" autocomplete="off" required>
             <br><br>
             Password:
             <br>
-            <input type="password" name="pass" id="" class="pass" required>
+            <input type="password" name="pass" id="" class="pass" autocomplete="off" required>
             <br><br>
 
             <input type="submit" name="sbmt" id="" class="sbmt" >
@@ -81,7 +81,12 @@ body{
 
         <form action="index.php" method="post">               
             <input type="submit" name="sbmt" id="" value="Back" class="back" >
-            </form>
+        </form>
+
+        <?php
+        if(isset($_SESSION['fpasserrormsg']))
+        echo "<span style='color:red;'>".$_SESSION['fpasserrormsg']."</span>"
+        ?>
     </div>
     </body>
 </html>

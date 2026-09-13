@@ -1,7 +1,10 @@
-<html>
+<?php
+if(!isset($_SESSION))session_start();
+?>
 
+<html>
 <head>
-  <title>RentEase Earnings</title>
+
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -40,8 +43,7 @@
       </div>
 
       <div class="profile">
-        <div class="circle">AD</div>
-
+        <div class="circle"><?php echo $_SESSION['username'][0];?></div>
         <div>
           <form action="../controller/logoutHandler.php">
             <button class="logout">Log Out</button>
@@ -50,23 +52,21 @@
       </div>
     </div>
 
-    <!-- Main Area -->
+    <!-- Main-->
 
     <div class="main">
       <h1>Earnings & Revenue</h1>
 
-      <!-- Earnings Summary Cards -->
+      <!-- EarningsCards -->
 
       <div class="earning-cards">
         <div class="earning-card">
           <p>Total Earnings</p>
-
           <h2 id="totalEarnings"></h2>
         </div>
 
         <div class="earning-card">
           <p>This Month</p>
-
           <h2 id="monthlyEarnings"></h2>
         </div>
 
@@ -83,9 +83,8 @@
 
       <div class="transaction-box">
         <h3>Recent Transactions</h3>
-
+        
         <table>
-
           <thead>
             <tr>
               <th>Date</th>
@@ -96,10 +95,9 @@
             </tr>
           </thead>
 
-          <tbody id="transactionTable">
-
-          </tbody>
+          <tbody id="transactionTable"> </tbody>
         </table>
+
       </div>
 
       <div id="refresh">
@@ -112,7 +110,7 @@
 
 
 
-  <!-- Api call Script code -->
+  <!-- Api call -->
 
 
   <script>
@@ -126,8 +124,10 @@
           if (xhr.status === 200) {
 
             var data = JSON.parse(xhr.responseText);
-
+            
             console.log(xhr.responseText);
+            
+            console.log(data);
 
             // Fill summary cards
             document.getElementById('totalEarnings').innerText = data.summary.totalEarnings;
@@ -137,7 +137,8 @@
             // Fill transaction table
             var table = document.getElementById('transactionTable');
             table.innerHTML = '';
-            var transactions = data.transactions;
+
+            var transactions = data.transactions;   //transactions is also array [ paymentID paymentDate Title clientName amount  status ]
 
             for (let i = 0; i < transactions.length; i++) {
 
@@ -170,7 +171,7 @@
     }
 
     document.getElementById("refreshbutton").addEventListener('click', loadEarningsData);
-    document.addEventListener('DOMContentLoaded', loadEarningsData); // load once on page open too
+    document.addEventListener('DOMContentLoaded', loadEarningsData); // load first time
   </script>
 
 </body>

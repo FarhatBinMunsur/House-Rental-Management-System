@@ -9,20 +9,21 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $user=new User();
 
     if(!$user->emailExists($email)){
-        $_SESSION['errormsg']="No account found with that email";
-        header('Location: ../view/forgotPass.php');
+        $_SESSION['fpasserrormsg']="No account found with that email";
+        header('Location:../index.php?page=forgotPass');
         exit();
     }
 
     $success=$user->resetPassword($email,$newPass);
 
     if($success){
-        unset($_SESSION['errormsg']);
-        header('Location: ../view/signin.php');
+        unset($_SESSION['fpasserrormsg']);
+        $_SESSION['fpasssuccess']="Password Updated Successfully";
+        header('Location:../index.php?page=signin');
         exit();
     }else{
-        $_SESSION['errormsg']="Failed to reset password. Please try again.";
-        header('Location: ../view/forgotPass.php');
+        $_SESSION['fpasserrormsg']="Failed to reset password. Please try again.";
+        header('Location:../index.php?page=forgotPass');
         exit();
     }
 }

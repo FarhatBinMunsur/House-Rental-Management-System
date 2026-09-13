@@ -7,24 +7,27 @@ if (isset($_SESSION['username'])) {
 
         require_once __DIR__ . '/View/adminDashboard.php';
 
-        
-    } elseif ($_SESSION['userRole'] === 'manager') {
+    } 
+    // elseif ($_SESSION['userRole'] === 'manager') {
 
-        require_once __DIR__ . '/View/managerHome.php';
+    //     require_once __DIR__ . '/View/managerHome.php';
 
-    } elseif ($_SESSION['userRole'] === 'owner') {
+    // }
+    elseif ($_SESSION['userRole'] === 'owner') {
 
-        require_once __DIR__ . '/View/ownerHome.php';
-
-    } else {
-
-        require_once __DIR__ . '/View/clientHome.php';
+        require_once __DIR__ . '/View/ownerDashboard.php';
+        // header('Location:View/ownerDashboard.php');
 
     }
+    //  else {
+
+    //     require_once __DIR__ . '/View/clientHome.php';
+
+    // }
 
 } else {
 
-    // Check which page the user requested
+    //kon page request krse
     if (isset($_GET['page'])) {
 
         if ($_GET['page'] === 'signup') {
@@ -36,7 +39,7 @@ if (isset($_SESSION['username'])) {
             require_once __DIR__ . '/View/forgotPass.php';
 
         } else {
-            echo $_SESSION['userRole'];
+            // echo $_SESSION['userRole'];
 
             require_once __DIR__ . '/View/signin.php';
 

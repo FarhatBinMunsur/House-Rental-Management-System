@@ -11,7 +11,7 @@ class ManagerModel{
 
     public function getAllManagers(){
         $conn=$this->establishConnection();
-        $sql="select * from users where userRole='manager' order by userID desc ";
+        $sql="select * from users where userRole='manager' order by userID  ";
         $result=$conn->query($sql);
 
         $managers=[];

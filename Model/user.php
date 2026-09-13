@@ -9,7 +9,7 @@ class User{
         return $conn;
     }
 
-    // Used by signin.php
+    //signin.php
     public function loginCheck($email,$pass){
         $conn=$this->establishConnection();
 
@@ -23,16 +23,16 @@ class User{
             $row=$result->fetch_assoc();
             if($row['userPassword']==$pass){
                 
-                return $row; // contains userRole, fullname, id, etc.
+                return $row; // contains userRole, userName
             }
         }
         return false;
     }
 
+    //signup.php
     public function emailExists($email){
         $conn=$this->establishConnection();
-
-        $sql="select id from users where userEmail=?";
+        $sql="select userID from users where userEmail=?";
         $stmt=$conn->prepare($sql);
         $stmt->bind_param('s',$email);
         $stmt->execute();
@@ -41,11 +41,10 @@ class User{
         return $result->num_rows>0;
     }
 
-    // Used by signup.php
+    //signup.php
     public function createUser($fullname,$email,$pass,$phone,$address,$userRole){
         $conn=$this->establishConnection();
-
-        $sql="insert into users(fullname,email,pass,phone,address,userRole) values(?,?,?,?,?,?)";
+        $sql="insert into users(userName,userEmail,userPassword,phone,address,userRole) values(?,?,?,?,?,?)";
         $stmt=$conn->prepare($sql);
         $stmt->bind_param('ssssss',$fullname,$email,$pass,$phone,$address,$userRole);
         $success=$stmt->execute();
@@ -60,8 +59,7 @@ class User{
     // Used by forgotPass.php
     public function resetPassword($email,$newPass){
         $conn=$this->establishConnection();
-
-        $sql="update users set pass=? where email=?";
+        $sql="update users set userPassword=? where userEmail=?";
         $stmt=$conn->prepare($sql);
         $stmt->bind_param('ss',$newPass,$email);
         return $stmt->execute();

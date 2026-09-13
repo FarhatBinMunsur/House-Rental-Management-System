@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+session_start();
 require_once __DIR__ . '/../model/managerModel.php';
 
 $managerModel = new ManagerModel();
@@ -47,7 +47,7 @@ if (isset($_GET['id'])) {
       </div>
 
       <div class="profile">
-        <div class="circle">AD</div>
+        <div class="circle"><?php echo $_SESSION['username'][0];?></div>
         <div>
           <form action="../controller/logoutHandler.php">
             <button class="logout">Log Out</button>
@@ -70,8 +70,8 @@ if (isset($_GET['id'])) {
           <!-- Manager Table -->
 
           <div class="manager-list">
-            <input type="text" id="search" name="search" class="search"
-              placeholder="Search listings, people, emails..." />
+            <!-- <input type="text" id="search" name="search" class="search"
+              placeholder="Search listings, people, emails..." /> -->
 
             <table>
               <thead>
@@ -86,16 +86,17 @@ if (isset($_GET['id'])) {
               </thead>
 
               <tbody id="managerTable">
-                <?php foreach ($managers as $m): ?>
-                  <tr onclick="window.location='?id=<?php echo $m['userID']; ?>' " ">
-                  <td><?php echo $m['userID']?></td>  
-                  <td><?php echo $m['userName']; ?></td>
+                <?php foreach ($managers as $m) { ?>
+                  <tr onclick="window.location='?id=<?php echo $m['userID']; ?>' ">
+                    <td><?php echo $m['userID'] ?></td>
+                    <td><?php echo $m['userName']; ?></td>
                     <td><?php echo $m['userEmail']; ?></td>
                     <td><?php echo $m['phone']; ?></td>
                     <td><?php echo $m['salary']; ?></td>
                   </tr>
-                <?php endforeach; ?>
+                <?php } ?>
               </tbody>
+
             </table>
 
             <!-- Buttons -->
@@ -112,13 +113,9 @@ if (isset($_GET['id'])) {
               <input type="submit" name="formAction" value="Save" class="save" />
             </div>
 
-            <?php
-            if(isset($_SESSION['MgOpError']))
-            echo "<p style=color:red; align-items:center; >" . $_SESSION['MgOpError'] . "</p>" ;
-            unset($_SESSION['MgOpError']);
-            ?>
             
-            
+
+
           </div>
 
           <!-- Manager Form -->
@@ -137,11 +134,19 @@ if (isset($_GET['id'])) {
             <input type="text" id="salary" name="salary" value="<?php echo $selectedManager['salary'] ?? ''; ?>" />
 
             <label class="label" for="joiningDate"> Joining Date </label>
-            <input type="date" id="joiningDate" name="joiningDate"
-              value="<?php echo $selectedManager['joiningDate'] ?? ''; ?>" />
+            <input type="date" id="joiningDate" name="joiningDate" value="<?php echo $selectedManager['joiningDate'] ?? ''; ?>" />
+          
+            
+          </div>
+          <div>
           </div>
         </div>
       </form>
+        <?php
+            if (isset($_SESSION['MgOpError']))
+              echo "<p style='color:red; font-family:Cambria;font-weight: bold; text-align:right; margin-right:80px;margin-top:20px' >" . $_SESSION['MgOpError'] . "</p>";
+            unset($_SESSION['MgOpError']);
+        ?>
     </div>
   </div>
 </body>

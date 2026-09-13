@@ -17,7 +17,8 @@ class DashboardModel
         $conn = $this->establishConnection();
         $sql = "SELECT COUNT(*) AS total FROM users where userRole='client'";
         $result = $conn->query($sql);
-        return $result->fetch_assoc()['total'];
+        $value=$result->fetch_assoc();
+        return $value['total'];
     }
 
     public function getTotalManagers()
@@ -25,7 +26,8 @@ class DashboardModel
         $conn = $this->establishConnection();
         $sql = "SELECT COUNT(*) AS total FROM users where userRole='manager'";
         $result = $conn->query($sql);
-        return $result->fetch_assoc()['total'];
+        $value=$result->fetch_assoc();
+        return $value['total'];        
     }
 
     public function getTotalOwners()
@@ -33,7 +35,8 @@ class DashboardModel
         $conn = $this->establishConnection();
         $sql = "SELECT COUNT(*) AS total FROM users where userRole='owner'";
         $result = $conn->query($sql);
-        return $result->fetch_assoc()['total'];
+        $value=$result->fetch_assoc();
+        return $value['total'];
     }
 
     public function getTotalProperties()
@@ -41,7 +44,8 @@ class DashboardModel
         $conn = $this->establishConnection();
         $sql = "SELECT COUNT(*) AS total FROM property";
         $result = $conn->query($sql);
-        return $result->fetch_assoc()['total'];
+        $value=$result->fetch_assoc();
+        return $value['total'];
     }
 
     public function getAvailableProperties()
@@ -49,7 +53,8 @@ class DashboardModel
         $conn = $this->establishConnection();
         $sql = "SELECT COUNT(*) AS total FROM property WHERE status = 'available'";
         $result = $conn->query($sql);
-        return $result->fetch_assoc()['total'];
+        $value=$result->fetch_assoc();
+        return $value['total'];
     }
 
     public function getRentedProperties()
@@ -57,7 +62,8 @@ class DashboardModel
         $conn = $this->establishConnection();
         $sql = "SELECT COUNT(*) AS total FROM property WHERE status = 'rented'";
         $result = $conn->query($sql);
-        return $result->fetch_assoc()['total'];
+        $value=$result->fetch_assoc();
+        return $value['total'];
     }
 
     public function getDashboardData()

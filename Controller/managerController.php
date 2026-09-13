@@ -52,7 +52,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
     if($formAction=='Delete'){
         if(!empty($id)){
-            echo "deleted";
+            
             $managerModel->deleteManager($id);
         }
         header('Location: ../view/adminManagersOperation.php');

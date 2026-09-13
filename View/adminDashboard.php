@@ -20,12 +20,11 @@ $summary = $_SESSION['dashboardData'];
   <div class="container">
 
     <div class="sidebar">
+
       <div class="logo">
         <img src="logo.png" />
-
         <div>
           <h3>RentEase</h3>
-
           <p>ADMIN PORTAL</p>
         </div>
       </div>
@@ -44,13 +43,12 @@ $summary = $_SESSION['dashboardData'];
         </a>
 
         <a href="adminEarnings.php">
-          <p>$ Earnings</p>
+          <p>Earnings</p>
         </a>
       </div>
 
       <div class="profile">
-        <div class="circle">AD</div>
-
+        <div class="circle"><?php echo $_SESSION['username'][0];?></div>
         <div>
           <form action="../controller/logoutHandler.php">
             <button class="logout">Log Out</button>
@@ -62,6 +60,7 @@ $summary = $_SESSION['dashboardData'];
     <!-- Dashboard -->
 
     <div class="main">
+
       <h1>Dashboard Overview</h1>
 
       <div class="top-cards">
@@ -88,15 +87,14 @@ $summary = $_SESSION['dashboardData'];
 
       <div class="bottom-cards">
         <div class="big-card">
-          <span> Available </span>
+          
           <h4>Available Properties</h4>
-          <h1 id="availableProperties"><?php echo $summary['availableProperties']; ?></h1>
+          <h1 id="available"><?php echo $summary['availableProperties']; ?></h1>
         </div>
 
         <div class="big-card">
-          <span> Rented </span>
           <h4>Rented Properties</h4>
-          <h1 id="rentedProperties"><?php echo $summary['rentedProperties']; ?></h1>
+          <h1 id="rented"><?php echo $summary['rentedProperties']; ?></h1>
         </div>
       </div>
     </div>

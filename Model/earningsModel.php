@@ -20,7 +20,7 @@ class EarningsModel{
     public function getMonthlyEarnings(){
         $conn=$this->establishConnection();
         $sql="select sum(amount) as total from payment 
-              where status='completed' 
+              where status='paid' 
               and month(paymentDate)=month(curdate()) 
               and year(paymentDate)=year(curdate())";
         $result=$conn->query($sql);
@@ -58,7 +58,9 @@ class EarningsModel{
     }
 
     public function getEarningsData(){
-        return [
+        
+        //assoc array[[array],[array]]
+        return [            
             'summary'=>[
                 'totalEarnings'=>$this->getTotalEarnings(),
                 'monthlyEarnings'=>$this->getMonthlyEarnings(),
