@@ -28,8 +28,11 @@ $propertyModel = new Property();
 $action = $_GET["action"] ?? "";
 
 
+<<<<<<< HEAD
 // new property create 
 
+=======
+>>>>>>> addf976 (Final updated owner)
 if ($action === "create") {
 
     if ($_SERVER["REQUEST_METHOD"] !== "POST") {
@@ -67,6 +70,7 @@ if ($action === "create") {
 
     if ($title === "") {
 
+<<<<<<< HEAD
         $errors[] =
             "Property title is required.";
 
@@ -74,6 +78,13 @@ if ($action === "create") {
 
         $errors[] =
             "Property title is too long.";
+=======
+        $errors[] = "Property title is required.";
+
+    } elseif (strlen($title) > 200) {
+
+        $errors[] = "Property title is too long.";
+>>>>>>> addf976 (Final updated owner)
     }
 
 
@@ -114,6 +125,7 @@ if ($action === "create") {
     }
 
 
+<<<<<<< HEAD
     if (
         $bedrooms === "" ||
         filter_var(
@@ -125,17 +137,31 @@ if ($action === "create") {
 
         $errors[] =
             "Bedrooms must be 0 or more.";
+=======
+    if ( $bedrooms === "" ||filter_var($bedrooms,FILTER_VALIDATE_INT) === false ||(int)$bedrooms < 0) 
+    {
+
+        $errors[] ="Bedrooms must be 0 or more.";
+>>>>>>> addf976 (Final updated owner)
     }
 
 
     if ( $bathrooms === "" || filter_var( $bathrooms,FILTER_VALIDATE_INT) === false || (int)$bathrooms < 0)
+<<<<<<< HEAD
      {
+=======
+    {
+>>>>>>> addf976 (Final updated owner)
 
         $errors[] = "Bathrooms must be 0 or more.";
     }
 
+<<<<<<< HEAD
     if (
         $area === "" || filter_var($area,FILTER_VALIDATE_INT ) === false ||(int)$area <= 0) 
+=======
+    if ( $area === "" || filter_var($area,FILTER_VALIDATE_INT ) === false ||(int)$area <= 0) 
+>>>>>>> addf976 (Final updated owner)
     {
         $errors[] = "Area must be greater than 0.";
     }
@@ -234,8 +260,11 @@ if ($action === "create") {
 
         $uploadDirectory = "../View/uploads/";
 
+<<<<<<< HEAD
 // jodi folder exit nh thake then create new directory
 
+=======
+>>>>>>> addf976 (Final updated owner)
         if (!is_dir($uploadDirectory)) 
         {
             mkdir( $uploadDirectory,0777,true);
@@ -252,7 +281,11 @@ if ($action === "create") {
                 pathinfo( $originalName, PATHINFO_EXTENSION )
             );
 
+<<<<<<< HEAD
 // new filename create korbe every image upload r pore
+=======
+// create new filename for every image after uploaded
+>>>>>>> addf976 (Final updated owner)
 
             $newName = uniqid( "property_",true) ."." .$extension;
 
@@ -266,9 +299,12 @@ if ($action === "create") {
         }
     }
 
+<<<<<<< HEAD
 
 // image convert to json format 
 
+=======
+>>>>>>> addf976 (Final updated owner)
     json_encode($savedImages);
 
     $created = $propertyModel->create(
@@ -295,10 +331,14 @@ if ($action === "create") {
     }
 
     exit();
+<<<<<<< HEAD
 }
 
 
 // dashboard statistics convert to JSON format 
+=======
+} 
+>>>>>>> addf976 (Final updated owner)
 
 if ($action === "stats") {
 

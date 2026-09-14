@@ -11,7 +11,11 @@ class Booking
         return $conn;
     }
 
+<<<<<<< HEAD
 // owner retrieve all bookings from client
+=======
+// owner retrieve all bookings from database
+>>>>>>> addf976 (Final updated owner)
 
     public function getOwnerBookings($ownerID)
     {

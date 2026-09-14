@@ -22,7 +22,10 @@ if (
     exit();
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> addf976 (Final updated owner)
 $bookingModel = new Booking();
 
 $action = $_GET["action"] ?? "";
