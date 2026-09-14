@@ -1,0 +1,462 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f8f9fc;
+}
+
+.container{
+    display:flex;
+}
+
+/* Sidebar */
+
+.sidebar{
+
+    width:170px;
+    height:100vh;
+    background:white;
+    border-right:1px solid white;
+    padding:25px 18px;
+    position:fixed;
+
+}
+
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    margin-bottom:35px;
+
+}
+
+
+.logo img{
+
+    width:30px;
+    height:30px;
+    margin-right:8px;
+
+}
+
+.logo h3{
+
+    font-size:15px;
+    color:#333;
+
+}
+
+.logo p{
+
+    font-size:8px;
+    color:#999;
+
+}
+
+.menu a{
+
+    text-decoration:none;
+
+}
+
+.menu p{
+
+    font-size:13px;
+    color:#393939;
+    padding:10px;
+    margin-bottom:5px;
+
+}
+
+.menu .active{
+
+    background:#e8e8f6;
+    color:#1c48f5;
+    border-radius:6px;
+
+}
+
+
+/* Admin Profile */
+
+.profile{
+
+    position:absolute;
+    bottom:25px;
+    left:18px;
+    width:135px;
+    height:45px;
+    border:1px solid #eeeeee;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    padding:6px;
+    background:white;
+
+}
+
+.circle{
+
+    width:28px;
+    height:28px;
+    background:#5274e8;
+    color:white;
+    border-radius:50%;
+    text-align:center;
+    padding-top:8px;
+    font-size:10px;
+    margin-right:8px;
+
+}
+
+.profile h5{
+    font-size:10px;
+}
+
+.profile p{
+    font-size:8px;
+    color:#888;
+}
+
+/* Main Area */
+
+.main{
+    margin-left:170px;
+    width:100%;
+    padding:45px 25px;
+}
+
+
+.main h1{
+    color:#5270db;
+    font-size:22px;
+    margin-bottom:35px;
+    height:30px;
+}
+
+/* Dashboard Background */
+
+.dashboard-area{
+    background:#fafbfc;
+    padding:20px;
+
+}
+
+/* Top Cards */
+
+.top-cards{
+    display:flex;
+    gap:15px;
+
+}
+
+.card{
+    background:white;
+    width:25%;
+    height:65px;
+    border:1px solid #eeeeee;
+    border-radius:12px;
+    padding:14px 16px;
+
+
+}
+
+.card p{
+    font-weight: bold;
+    color:#626262;
+    font-size:11px;
+}
+
+.card h2{
+    font-size:20px;
+    color:#222;
+    margin-top:5px;
+
+
+}
+
+/* Bottom Property Cards */
+
+.bottom-cards{
+    display:flex;
+    gap:40px;
+    margin-top:18px;
+}
+
+.big-card{
+    width:50%;
+    height:85px;
+    background:white;
+    border:1px solid rgb(228, 228, 228);
+    border-radius:12px;
+    padding:16px;
+    position:relative;
+
+}
+
+.big-card h4{
+    font-size:13px;
+    color:#333;
+    
+}
+
+.big-card h1{
+    font-size:28px;
+    color: rgb(82, 204, 21);
+    margin-top:8px;
+
+}
+.big-card h1#rented{
+    color: rgb(70, 25, 191) ;
+}
+
+
+/* Managers Page */
+.manager-section{
+    display:flex;
+    gap:15px;
+}
+
+.manager-list{
+    width:65%;
+}
+
+.search{
+    width:100%;
+    height:35px;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:7px;
+    margin-bottom:12px;
+
+}
+
+table{
+    width:100%;
+    background:white;
+    border-collapse:collapse;
+    border-radius:10px;
+
+}
+
+th{ 
+    height:35px;
+    font-size:13px;
+    color:black;
+    text-align: center; 
+    vertical-align: middle;
+
+}
+
+td{
+    height:45px;
+    font-size:12px;
+    padding:10px;
+    border-top:1px solid rgb(226, 222, 222);
+    /* border-right:1px solid black; */
+    text-align: center; 
+    vertical-align: middle;
+
+}
+
+.manager-form{
+    width:400px;
+    background:#5270db;
+    padding:15px;
+    border-radius:8px;
+    /* margin-top:10px; */
+    margin-left: 40px;
+
+}
+
+.manager-form .label{
+    color:white;
+    font-size:11px;
+    margin-top:10px;
+    margin-bottom:5px;
+    display:block;
+
+}
+
+.manager-form input{
+    width:100%;
+    height:30px;
+    border:none;
+    border-radius:3px;
+    margin-bottom:5px;
+
+}
+
+.buttons{
+    text-align:center;
+    margin-top:20px;
+}
+
+.buttons button{
+    padding:10px 22px;
+    border:none;
+    color:white;
+    border-radius:5px;
+    margin:5px;
+    cursor:pointer;
+}
+
+.new{
+    background:#adff6f;
+    border:0px solid;
+    border-radius: 10px;
+    padding:10px;
+
+}
+
+.refresh{
+    background:#42d1e0;
+    border:0px solid;
+    border-radius: 10px;
+    padding:10px;
+    
+}
+
+.delete{
+    background:#ee1207;
+    color: white;
+    border:0px solid;
+    border-radius: 10px;
+    padding:10px;
+
+}
+
+.save{
+    background:#adff6f;
+    border:0px solid;
+    border-radius: 10px;
+    padding:10px;
+
+}
+/* owner pp */
+
+.manager-form textarea{
+    width:100%;
+    height:85px;
+    border:none;
+    border-radius:3px;
+    margin-top:5px;
+
+}
+
+/* Earnings Page */
+
+/* Earnings Summary Cards */
+
+.earning-cards{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+
+}
+
+.earning-card{
+    width:260px;
+    height:70px;
+    background:white;
+    border:1px solid #eeeeee;
+    border-radius:12px;
+    padding:15px;
+
+}
+
+.earning-card p{
+    font-size:11px;
+    color:#999;
+}
+
+.earning-card h2{
+    font-size:22px;
+    color:#222;
+    margin-top:5px;
+}
+
+.earning-card h2#totalEarnings{
+    
+    color: rgb(228, 0, 106);
+}
+
+.earning-card h2#pendingPayments{
+    color: rgb(27, 20, 236);
+}
+
+/* Transaction Table Box */
+
+.transaction-box{
+    background:white;
+    border:1px solid #eeeeee;
+    border-radius:12px;
+    padding:15px;
+    width:100%;
+
+}
+
+.transaction-box h3{
+    font-size:14px;
+    color:#333;
+    margin-bottom:10px;
+}
+
+.transaction-box table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.transaction-box th{
+    text-align:left;
+    font-size:11px;
+    color:#777;
+    height:35px;
+    text-align: center; 
+    vertical-align: middle;
+}
+
+.transaction-box td{
+    height:45px;
+    font-size:12px;
+    border-top:1px solid #eeeeee;
+    color:#555;
+    text-align: center; 
+    vertical-align: middle;
+}
+
+#refresh {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+#refresh button {
+    background-color: #264edf;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.logout{
+    background-color:red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    /* padding: 10px 20px; */
+    cursor: pointer;
+    width: 150%;
+    height: 100%;
+}
+
+
+
+

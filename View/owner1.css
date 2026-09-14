@@ -1,0 +1,1307 @@
+
+/* Common styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fb;
+    color: #1f2937;
+}
+
+
+/* Common Dashboard layout */
+
+.dashboard {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* common sidebar */
+
+.sidebar {
+    width: 190px;
+    min-width: 190px;
+    height: 100vh;
+
+    background: #ffffff;
+
+    border-right: 1px solid #e5e7eb;
+
+    position: relative;
+
+    padding: 18px 12px;
+}
+
+
+/* common logo */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 0 7px;
+
+    margin-bottom: 24px;
+}
+
+.logo-icon {
+    width: 30px;
+    height: 30px;
+
+    background: #3561df;
+
+    color: #ffffff;
+
+    border-radius: 7px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+.logo-text h2 {
+    font-size: 15px;
+
+    color: #202938;
+
+    line-height: 17px;
+
+    font-weight: 700;
+}
+
+.logo-text span {
+    font-size: 8px;
+
+    color: #7b8494;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* common navigation*/
+
+.navigation {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.nav-item {
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 14px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    color: black;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+}
+
+.nav-item:hover {
+    background: #f0f4fc;
+}
+
+.nav-item.active {
+    background: #eef4ff;
+
+    color: #2563eb;
+
+    font-weight: 600;
+}
+
+
+/* common profile */
+
+.profile {
+    position: absolute;
+
+    left: 12px;
+
+    right: 12px;
+
+    bottom: 14px;
+
+    height: 50px;
+
+    border: 1px solid #e6e9ee;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 7px;
+
+    gap: 8px;
+
+    background: lightyellow;
+}
+
+.profile-avatar {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #3764df;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.profile-info {
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+.profile-info strong {
+    font-size: 11px;
+
+    color: black;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.profile-info small {
+    font-size: 9px;
+
+    color:black;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* common main content */
+
+.main-content {
+    flex: 1;
+
+    min-width: 0;
+
+    width: calc(100% - 190px);
+}
+
+
+/* common header */
+
+.top-header {
+    width: 100%;
+
+    height: 73px;
+
+    background: white;
+
+    border-bottom: 1px solid #e8ebef;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 24px;
+}
+
+.top-header h1 {
+    font-size: 19px;
+
+    font-weight: 700;
+
+    color: Black;
+}
+
+
+/* dashboard statistic content */
+
+.content {
+    width: 100%;
+
+    min-height: calc(100vh - 73px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    padding-top: 35px;
+}
+
+
+/* dashboard blue statistic card */
+
+.stats-card {
+    width: 280px;
+
+    height: 360px;
+
+    background: #3761dc;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding-top: 50px;
+
+    gap: 30px;
+}
+
+
+/*  dashboard statistic box */
+
+.stat-box {
+    width: 200px;
+
+    height: 60px;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    padding: 10px 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.stat-label {
+    font-size: 10px;
+
+    color: #515764;
+
+    margin-bottom: 4px;
+}
+
+.stat-number {
+    font-size: 17px;
+
+    color: #202530;
+
+    font-weight: 700;
+}
+
+
+/* post rental (main content) */
+
+.post-content {
+    width: 100%;
+
+    height: calc(100vh - 73px);
+
+    min-height: 0;
+
+    background: #f8f9fb;
+
+    padding: 18px;
+
+    overflow-y: auto;
+}
+
+
+/* post rental (form card) */
+
+.rental-card {
+    width: 100%;
+
+    max-width: 760px; 
+
+    min-height: 0;
+
+    height: auto;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 8px;
+
+    padding: 14px 18px; 
+}
+
+
+/* form title */
+
+.rental-card h2 {
+    font-size: 15px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px; 
+
+    color: #202530;
+}
+
+
+/* form row */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+
+    margin-bottom: 8px; 
+}
+
+
+/*  four column row */
+
+.form-row.four-columns {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    gap: 10px;
+}
+
+
+/*  form group */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+
+/*  form table  */
+
+.form-group label,
+.description-group label {
+    font-size: 11px;
+
+    color: #202530;
+
+    margin-bottom: 5px;
+
+    font-weight: 600;
+}
+
+
+/* input + select */
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    height: 32px;
+
+    border: 1px solid #d9dee6;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    padding: 0 9px;
+
+    font-size: 11px;
+
+    color: #303846;
+
+    background: #ffffff;
+}
+
+
+.form-group input::placeholder {
+    color: #9ca3af;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3764df;
+
+    box-shadow: 0 0 0 2px rgba(55, 100, 223, 0.10);
+}
+
+
+/* description */
+
+.description-group {
+    width: 100%;
+
+    margin-top: 2px;
+
+    margin-bottom: 8px; 
+}
+
+
+.description-group textarea {
+    width: 100%;
+
+    height: 55px; 
+
+    resize: none;
+
+    border: 1px solid #d9dee6;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    padding: 8px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    color: #303846;
+
+    background: #ffffff;
+}
+
+
+.description-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+
+.description-group textarea:focus {
+    border-color: #3764df;
+
+    box-shadow: 0 0 0 2px rgba(55, 100, 223, 0.10);
+}
+
+
+/* image upload */
+
+.upload-box {
+    width: 100%;
+
+    height: 55px; 
+
+    border: 1px dashed #d9dee6;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    background: #ffffff;
+
+    transition: 0.2s;
+}
+
+
+.upload-box:hover {
+    border-color: #3764df;
+
+    background: #fafcff;
+}
+
+
+.upload-box input {
+    display: none;
+}
+
+
+.upload-title {
+    font-size: 11px;
+
+    color: #3764df;
+
+    font-weight: bold;
+
+    margin-bottom: 3px;
+}
+
+
+.upload-info {
+    font-size: 8px;
+
+    color: #9ca3af;
+}
+
+
+/* button */
+
+.button-area {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 8px; 
+}
+
+
+.button-area button {
+    width: 80px;
+
+    height: 32px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #3764df;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.button-area button:hover {
+    background: #2f55c9;
+}
+
+
+/* responsive */
+
+@media (max-width: 900px) {
+
+    .form-row.four-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+    .rental-card {
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .post-content {
+        padding: 12px;
+    }
+    .rental-card {
+        padding: 14px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .post-content {
+        height: auto;
+
+        min-height: calc(100vh - 60px);
+
+        padding: 12px;
+    }
+
+    .rental-card {
+        width: 100%;
+
+        padding: 14px;
+    }
+
+    .form-row,
+    .form-row.four-columns {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+}
+
+
+/* bookings content */
+
+.booking-content {
+    width: 100%;
+    min-height: calc(100vh - 73px);
+
+    background: #f8f9fb;
+
+    padding: 25px;
+}
+
+
+/* bookings card */
+
+.booking-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 10px;
+
+    padding: 20px 18px 18px 18px;
+
+    overflow: hidden;
+}
+
+
+/* bookings table */
+
+.booking-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+}
+
+
+/* bookings table header  */
+
+.booking-table thead th {
+    height: 40px;
+
+    text-align: left;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #394150;
+
+    padding: 0 12px;
+
+    white-space: nowrap;
+}
+
+
+/* bookings table body */
+
+.booking-table tbody tr {
+    height: 55px;
+    border-top: 1px solid #eef0f3;
+}
+
+
+.booking-table tbody tr:last-child {
+    border-bottom: 1px solid #eef0f3;
+}
+
+
+.booking-table tbody td {
+    padding: 8px 12px;
+
+    font-size: 11px;
+
+    color: #6f7784;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* bookings client name */
+
+.booking-client {
+    color: #202530 !important;
+
+    font-weight: 700;
+
+    font-size: 12px !important;
+}
+
+
+/* bookings property */
+
+.booking-property {
+    color: #202530 !important;
+
+    font-size: 12px !important;
+}
+
+
+/* bookings date */
+
+.booking-date {
+   color: #202530 !important;
+
+    font-size: 12px !important;
+}
+
+
+/* bookings duration */
+
+.booking-duration {
+    color: #596270;
+
+    font-size: 11px !important;
+}
+
+
+/* bookings message */
+
+.booking-message {
+    color: #9aa1ad !important;
+
+    font-size: 11px !important;
+}
+
+
+/* bookings actions */
+
+.booking-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* bookings accept button */
+
+.accept-btn {
+    height: 28px;
+
+    min-width: 60px;
+
+    padding: 0 10px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #d9f7e8;
+
+    color: #168354;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.accept-btn:hover {
+    background: #c6f0dc;
+}
+
+
+/* bookings reject button */
+
+.reject-btn {
+    height: 28px;
+
+    min-width: 60px;
+
+    padding: 0 10px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #fde3e3;
+
+    color: #c74646;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.reject-btn:hover {
+    background: #f9d0d0;
+}
+
+
+/* bookings status badge */
+
+.status-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 65px;
+
+    height: 28px;
+
+    padding: 0 10px;
+
+    border-radius: 6px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+/* Accepted */
+
+.status-accepted {
+    background: #d9f7e8;
+
+    color: #168354;
+}
+
+
+/* Rejected */
+
+.status-rejected {
+    background: #fde3e3;
+
+    color: #c74646;
+}
+
+
+/* bookings table column width */
+
+.booking-table th:nth-child(1),
+.booking-table td:nth-child(1) {
+    width: 14%;
+}
+
+
+.booking-table th:nth-child(2),
+.booking-table td:nth-child(2) {
+    width: 18%;
+}
+
+
+.booking-table th:nth-child(3),
+.booking-table td:nth-child(3) {
+    width: 13%;
+}
+
+
+.booking-table th:nth-child(4),
+.booking-table td:nth-child(4) {
+    width: 10%;
+}
+
+
+.booking-table th:nth-child(5),
+.booking-table td:nth-child(5) {
+    width: 27%;
+}
+
+
+.booking-table th:nth-child(6),
+.booking-table td:nth-child(6) {
+    width: 18%;
+}
+
+
+/* bookings responsive */
+
+@media (max-width: 800px) {
+
+    .booking-content {
+        padding: 15px;
+    }
+
+    .booking-card {
+        overflow-x: auto;
+    }
+
+    .booking-table {
+        min-width: 750px;
+    }
+
+    .booking-table thead th {
+        font-size: 11px;
+    }
+
+    .booking-table tbody td {
+        font-size: 10px;
+    }
+}
+
+/*  Revenue page....................  */
+
+/* Revenue Content */
+
+.content-box {
+    width: 100%;
+    min-height: calc(100vh - 73px);
+
+    background: #f8f9fb;
+
+    padding: 20px 25px;
+}
+
+/* Revenue Card */
+
+.cards {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Individual Card */
+
+.card {
+    height: 90px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+
+/* Card Title */
+
+.card-title {
+    font-size: 11px;
+
+    color: #8b93a1;
+
+    margin-bottom: 7px;
+}
+
+
+/* Card Value */
+
+.card-value {
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: #202938;
+}
+
+
+/* Revenue payment record box */
+
+.payment-box {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    overflow-x: auto;
+}
+
+
+/* Payment Title */
+
+.payment-title {
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #202530;
+
+    margin-bottom: 15px;
+}
+
+
+/* Revenue payment table */
+
+.payment-box table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+
+    min-width: 750px;
+}
+
+
+/* Revenue Table Header */
+
+.payment-box table thead {
+    background: #f7f8fa;
+}
+
+
+.payment-box table th {
+    height: 38px;
+
+    text-align: left;
+
+    padding: 0 10px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #596270;
+
+    white-space: nowrap;
+}
+
+
+/* Revenue Table Body Row */
+
+.payment-box table tbody tr {
+    height: 48px;
+
+    border-bottom: 1px solid #eef0f3;
+}
+
+
+/* Revenue Table Data */
+
+.payment-box table td {
+    padding: 8px 10px;
+
+    font-size: 11px;
+
+    color: #6f7784;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* Revenue (Property Name) */
+
+.payment-box table td:first-child {
+    color: #303846;
+
+    font-weight: 600;
+}
+
+
+/* Amount */
+.amount {
+    color: #3561df !important;
+
+    font-weight: 700;
+}
+
+
+/* Revenue status */
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 58px;
+
+    height: 24px;
+
+    padding: 0 8px;
+
+    border-radius: 12px;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+
+/* Received */
+
+.received {
+    background: #dff5e8;
+
+    color: #168354;
+}
+
+
+/* Pending */
+
+.pending {
+    background: #fff3d9;
+
+    color: #b7791f;
+}
+
+
+/*Revenue table column width */
+
+.payment-box table th:nth-child(1),
+.payment-box table td:nth-child(1) {
+    width: 22%;
+}
+
+
+.payment-box table th:nth-child(2),
+.payment-box table td:nth-child(2) {
+    width: 16%;
+}
+
+
+.payment-box table th:nth-child(3),
+.payment-box table td:nth-child(3) {
+    width: 13%;
+}
+
+
+.payment-box table th:nth-child(4),
+.payment-box table td:nth-child(4) {
+    width: 13%;
+}
+
+
+.payment-box table th:nth-child(5),
+.payment-box table td:nth-child(5) {
+    width: 20%;
+}
+
+
+.payment-box table th:nth-child(6),
+.payment-box table td:nth-child(6) {
+    width: 16%;
+}
+
+
+/* revenue responsive */
+
+@media (max-width: 900px) {
+
+    .cards {
+        gap: 12px;
+    }
+
+    .content-box {
+        padding: 18px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .content-box {
+        padding: 12px;
+    }
+
+    .payment-box {
+        padding: 12px;
+    }
+
+    .card-value {
+        font-size: 20px;
+    }
+
+}
+
+/* MVC additions */
+
+.field-error {
+    color: #c74646;
+    font-size: 10px;
+    min-height: 12px;
+    margin-top: 3px;
+}
+
+.error-message {
+    color: #c74646;
+    font-size: 11px;
+    margin: 8px 0;
+}
+
+.success-message {
+    color: #168354;
+    font-size: 11px;
+    margin: 8px 0;
+}
+
+.rental-card form {
+    width: 100%;
+}
+
+.rental-card > form > .form-group {
+    margin-bottom: 8px;
+}
