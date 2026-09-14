@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__.'/../db/db.php';
 
+
 class User{
 
     public function establishConnection(){
@@ -102,4 +103,6 @@ class User{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 }
+
+
 ?>
