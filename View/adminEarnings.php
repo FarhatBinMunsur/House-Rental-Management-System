@@ -130,8 +130,8 @@ if(!isset($_SESSION))session_start();
             console.log(data);
 
             // Fill summary cards
-            document.getElementById('totalEarnings').innerText = data.summary.totalEarnings;
-            document.getElementById('monthlyEarnings').innerText = data.summary.monthlyEarnings;
+            document.getElementById('totalEarnings').innerText = data.summary.totalEarnings*.12;
+            document.getElementById('monthlyEarnings').innerText = data.summary.monthlyEarnings*.12;
             document.getElementById('pendingPayments').innerText = data.summary.pendingPayments;
 
             // Fill transaction table
