@@ -110,10 +110,10 @@
         </div>
 
 
-        <form action="controller/loginHandler.php" method="POST">
-            <label for="">User Name</label>
+        <form action="controller/loginHandler.php" id="loginForm" method="POST">
+            <label for="">Email</label>
             <br>
-            <input type="text" name="email" id="email" placeholder="Enter your user name">
+            <input type="text" name="email" id="email" placeholder="Enter your Email">
             <br><br>
 
             <label for="">Password</label>
@@ -126,15 +126,22 @@
                 Forgot password?
             </a>
 
+
             <br>
+
+            <p id="error"  style='color:red; font-family:Cambria; text-align:center; '></p>
+
             <?php
             
             if (isset($_SESSION['errormsg'])){
                 echo "<span style='color:red; display:block;text-align:center' >" . $_SESSION['errormsg'] . "</span><br>" ;
+                unset($_SESSION['errormsg']);
             }   
 
+
+
              if (isset($_SESSION['fpasssuccess'])){
-                echo "<span style='color:red; display:block;text-align:center' >" . $_SESSION['fpasssuccess'] . "</span><br>" ;  
+                echo "<span style='color:red; display:block; text-align:center' >" . $_SESSION['fpasssuccess'] . "</span><br>" ;  
             } 
             
             ?>
@@ -147,6 +154,7 @@
             </form>
         </div>
 
+    <script src="View/signin.js"></script>
 
     </body>
 

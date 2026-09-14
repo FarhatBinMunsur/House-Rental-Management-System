@@ -20,7 +20,6 @@ if (isset($_GET['id'])) {
 
 <body>
   <div class="container">
-    <!-- Sidebar -->
 
     <div class="sidebar">
       <div class="logo">
@@ -56,14 +55,13 @@ if (isset($_GET['id'])) {
       </div>
     </div>
 
-    <!-- Main Area -->
 
     <div class="main">
       <h1>Managers</h1>
 
-      <form action="../controller/managerController.php" method="post">
+      <form action="../controller/managerController.php" id="managerForm" method="post">
 
-        <!-- Carries the currently selected manager's ID (empty if none selected) -->
+        <!-- the currently selected ID-->
         <input type="hidden" name="managerID" value="<?php echo $selectedManager['userID'] ?? ''; ?>">
 
         <div class="manager-section">
@@ -104,13 +102,13 @@ if (isset($_GET['id'])) {
             <div class="buttons">
               <a href="adminManagersOperation.php"><input type="button" class="new" value="New" /></a>
 
-              <input type="submit" name="formAction" value="Update" class="refresh" />
+              <input type="submit" name="formAction" id="Update" value="Update" class="refresh" />
 
               <!-- DELETE removes the selected manager -->
               <input type="submit" name="formAction" value="Delete" class="delete" />
 
               <!-- SAVE inserts a new manager -->
-              <input type="submit" name="formAction" value="Save" class="save" />
+              <input type="submit" name="formAction" id="Save" value="Save" class="save" />
             </div>
 
             
@@ -142,13 +140,19 @@ if (isset($_GET['id'])) {
           </div>
         </div>
       </form>
+        
+        <p id="error"  style='color:red; font-family:Cambria;font-weight: bold; text-align:right; margin-right:80px;margin-top:20px'></p>
+
         <?php
             if (isset($_SESSION['MgOpError']))
               echo "<p style='color:red; font-family:Cambria;font-weight: bold; text-align:right; margin-right:80px;margin-top:20px' >" . $_SESSION['MgOpError'] . "</p>";
             unset($_SESSION['MgOpError']);
         ?>
+
     </div>
   </div>
+
+  <script src="adminManager.js"></script>
 </body>
 
 </html>
