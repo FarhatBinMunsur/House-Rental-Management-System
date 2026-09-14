@@ -90,4 +90,8 @@ class Payment
         return mysqli_stmt_get_result($stmt);
     }
 }
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> addf976 (Final updated owner)

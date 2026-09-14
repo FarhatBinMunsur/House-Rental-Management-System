@@ -11,7 +11,7 @@ class Booking
         return $conn;
     }
 
-    // Get all bookings for the owner
+
     public function getOwnerBookings($ownerID)
     {
         $sql = "SELECT b.bookingID, b.bookingDate, b.status,

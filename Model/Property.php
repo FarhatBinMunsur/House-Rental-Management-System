@@ -65,10 +65,14 @@ class Property
 
         $stmt1 = $conn->prepare($sql1);
 
+<<<<<<< HEAD
         $stmt1->bind_param(
             "i",
             $ownerID
         );
+=======
+        $stmt1->bind_param("i",$ownerID);
+>>>>>>> addf976 (Final updated owner)
 
         $stmt1->execute();
 
@@ -88,10 +92,14 @@ class Property
 
         $stmt2 = $conn->prepare($sql2);
 
+<<<<<<< HEAD
         $stmt2->bind_param(
             "i",
             $ownerID
         );
+=======
+        $stmt2->bind_param("i",$ownerID);
+>>>>>>> addf976 (Final updated owner)
 
         $stmt2->execute();
 
@@ -113,10 +121,14 @@ class Property
 
         $stmt3 = $conn->prepare($sql3);
 
+<<<<<<< HEAD
         $stmt3->bind_param(
             "i",
             $ownerID
         );
+=======
+        $stmt3->bind_param("i",$ownerID);
+>>>>>>> addf976 (Final updated owner)
 
         $stmt3->execute();
 
@@ -126,7 +138,10 @@ class Property
 
         $stats["rentOngoing"] = (int)$row3["total"];
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> addf976 (Final updated owner)
         return $stats;
     }
 }
