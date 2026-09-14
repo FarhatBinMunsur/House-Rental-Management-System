@@ -11,11 +11,6 @@ class Booking
         return $conn;
     }
 
-<<<<<<< HEAD
-// owner retrieve all bookings from client
-=======
-// owner retrieve all bookings from database
->>>>>>> addf976 (Final updated owner)
 
     public function getOwnerBookings($ownerID)
     {
@@ -23,8 +18,10 @@ class Booking
                        u.userName AS clientName,
                        p.Title AS propertyTitle
                 FROM booking b
-                INNER JOIN property p ON b.propertyID = p.propertyID
-                INNER JOIN users u ON b.clientID = u.userID
+                INNER JOIN property p
+                    ON b.propertyID = p.propertyID
+                INNER JOIN users u
+                    ON b.clientID = u.userID
                 WHERE p.ownerID = ?
                 ORDER BY b.bookingDate DESC";
 
@@ -34,8 +31,6 @@ class Booking
         $stmt->execute();
         return $stmt->get_result();
     }
-
-// bookings status update 
 
     public function updateStatus($bookingID, $ownerID, $status)
     {
