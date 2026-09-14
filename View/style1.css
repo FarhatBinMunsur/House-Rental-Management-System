@@ -1,0 +1,109 @@
+/* RentEase Client Portal - fixed stylesheet */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{min-height:100%}
+body{font-family:Arial,sans-serif;background:#f7f8fc;color:#333}
+a{color:inherit}
+button,input,select{font:inherit}
+
+.container{display:flex;min-height:100vh}
+.sidebar{width:220px;height:100vh;background:#fff;border-right:1px solid #e9ebf2;position:fixed;left:0;top:0;padding:24px 18px;z-index:10}
+.logo{display:flex;align-items:center;margin-bottom:35px}
+.logo img{width:34px;height:34px;object-fit:contain;margin-right:9px}
+.logo h3{font-size:16px;color:#333}
+.logo p{font-size:9px;color:#999;margin-top:2px}
+.menu a{text-decoration:none;display:block}
+.menu p{padding:11px 12px;margin-bottom:5px;font-size:13px;color:#555;border-radius:7px;transition:.15s}
+.menu .active,.menu p:hover{background:#eef3ff;color:#5274e8}
+.profile{position:absolute;left:18px;right:18px;bottom:20px;display:flex;align-items:center;border:1px solid #eee;padding:7px;border-radius:9px;background:#fff}
+.profile .circle{flex:0 0 30px}
+.profile h5{font-size:10px}
+.profile p{font-size:8px;color:#888;margin-top:2px}
+
+.circle{width:30px;height:30px;background:#5274e8;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-right:9px;font-size:10px}
+
+.main{margin-left:220px;padding:38px 30px;width:calc(100% - 220px);min-width:0}
+.main h1{color:#5274e8;font-size:22px;margin-bottom:24px}
+
+.search-area{display:flex;gap:10px;align-items:center;background:#fff;padding:14px;border:1px solid #eee;border-radius:10px;margin-bottom:20px}
+.search-area input,.search-area select{height:38px;border:1px solid #ddd;border-radius:6px;padding:8px 10px;background:#fff}
+.search-area input{flex:1;min-width:160px}
+.search-area select{min-width:150px}
+.search-area input[type=submit]{flex:0 0 auto;width:auto;background:#5274e8;color:#fff;border:0;cursor:pointer;font-weight:600;padding:0 18px}
+
+.property-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.property-card{width:auto;background:#fff;border-radius:12px;border:1px solid #e9ebf0;overflow:hidden;box-shadow:0 2px 8px rgba(30,45,80,.03)}
+.property-card img{display:block;width:100%;height:180px;object-fit:cover}
+.property-card h3{font-size:15px;padding:13px 13px 6px}
+.property-card p{font-size:12px;color:#777;padding:0 13px}
+.details{display:flex;gap:18px;padding:12px 13px;font-size:12px;color:#555}
+.bottom{display:flex;align-items:center;justify-content:space-between;padding:12px 13px;border-top:1px solid #f0f0f0}
+.bottom h2{font-size:17px;color:#5274e8}
+.bottom button,.bottom a button{background:#eef3ff;color:#5274e8;border:0;padding:8px 12px;border-radius:6px;cursor:pointer}
+.bottom a{text-decoration:none}
+
+.property-image{width:100%;height:300px;margin-bottom:20px}
+.property-image img{display:block;width:100%;height:100%;object-fit:cover;border-radius:12px}
+.details-section{display:flex;gap:20px;align-items:flex-start}
+.property-info{width:70%;background:#fff;padding:20px;border-radius:12px;border:1px solid #eee}
+.title-price{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+.title-price h2{font-size:20px}
+.price{color:#5274e8;white-space:nowrap}
+.property-info>p{margin-top:8px;color:#777;font-size:13px}
+.property-info hr{border:0;border-top:1px solid #eee;margin:18px 0}
+.property-data{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:15px 0}
+.property-data h5{font-size:10px;color:#999;margin-bottom:5px}
+.property-data p{font-size:12px}
+.description{font-size:12px!important;line-height:1.6;color:#666!important}
+.owner-box{width:30%;background:#fff;padding:18px;border-radius:12px;border:1px solid #eee}
+.owner-box h3{font-size:16px}
+.owner{display:flex;align-items:center;margin:16px 0}
+.owner-box>p{font-size:12px;color:#666;margin-top:9px}
+.owner-box button{width:100%;padding:10px;margin-top:10px;border-radius:6px;cursor:pointer}
+.book{background:#5274e8;color:#fff;border:0!important}
+.compare{background:#fff;color:#5274e8;border:1px solid #ddd!important}
+
+.rental-cards{display:flex;gap:15px;margin-bottom:20px}
+.rental-card{flex:0 1 390px;min-width:200px;background:#fff;border:1px solid #eee;border-radius:12px;padding:15px}
+.rental-card p{font-size:11px;color:#999}
+.rental-card h2{font-size:22px;color:#222;margin-top:5px}
+.rental-table-box{background:#fff;border:1px solid #eee;border-radius:12px;padding:15px;overflow-x:auto}
+.rental-table-box table{width:100%;border-collapse:collapse;min-width:780px}
+.rental-table-box th{text-align:left;font-size:11px;color:#777;height:35px;padding:0 8px}
+.rental-table-box td{height:48px;font-size:12px;color:#555;border-top:1px solid #eee;padding:7px 8px;vertical-align:middle}
+.rental-table-box td form{display:inline}
+.active-status,.paid-status{background:#dff5e7;color:#4c9b69;padding:5px 12px;border-radius:15px;font-size:10px;display:inline-block}
+.expired-status{background:#f8dddd;color:#b56b6b;padding:5px 12px;border-radius:15px;font-size:10px;display:inline-block}
+.due-status{background:#fff1d6;color:#a17c27;padding:5px 12px;border-radius:15px;font-size:10px;display:inline-block}
+.rental-table-box td a{color:#5274e8;text-decoration:none;margin-left:7px;font-size:11px;font-weight:600}
+
+.notification-box{width:100%}
+.notification{background:#fff;border:1px solid #eee;border-radius:12px;padding:15px;margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.notification .dot{flex:0 0 8px;width:8px;height:8px;background:#5274e8;border-radius:50%}
+.notification h4{font-size:13px}
+.notification p{font-size:11px;color:#999;margin-top:5px}
+.notification small{margin-left:auto;color:#aaa;font-size:10px;white-space:nowrap}
+
+.booking-form{display:block;margin:0}
+.booking-form .book{cursor:pointer;width:100%;padding:10px;border-radius:6px}
+.booking-success{margin:0 0 18px;padding:11px 14px;border-radius:7px;background:#e8f7e8;color:#216b21;border:1px solid #cce8cc}
+.booking-error{margin:10px 0;padding:10px 14px;border-radius:6px;background:#fdeaea;color:#9b2222}
+.cancel-booking{display:inline-block!important;padding:8px 13px!important;border:1px solid #dc3545!important;background:#fff!important;color:#dc3545!important;border-radius:6px!important;cursor:pointer;font-weight:600;white-space:nowrap}
+.cancel-booking:hover{background:#dc3545!important;color:#fff!important}
+
+@media(max-width:800px){
+ .sidebar{width:190px}.main{margin-left:190px;width:calc(100% - 190px);padding:25px 18px}
+ .search-area{flex-wrap:wrap}.search-area input{width:100%;flex-basis:100%}
+ .details-section{flex-direction:column}.property-info,.owner-box{width:100%}
+ .property-data{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+ .sidebar{position:relative;width:100%;height:auto;border-right:0;border-bottom:1px solid #eee}
+ .container{display:block}.main{margin-left:0;width:100%}
+ .profile{position:static;margin-top:20px}
+ .property-image{height:220px}.title-price{flex-direction:column}
+}
+
+.booking-error{background:#fff1f2;border:1px solid #fecdd3;color:#b42318;padding:11px 14px;border-radius:8px;margin:0 0 15px;font-size:13px;}
+.cancel-booking:disabled{opacity:.65;cursor:not-allowed;}
+.cancel-booking.is-loading{position:relative;padding-right:30px!important;}
+.empty-rentals{text-align:center!important;color:#888!important;padding:28px!important;}

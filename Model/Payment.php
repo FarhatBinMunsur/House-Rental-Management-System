@@ -17,12 +17,12 @@ class Payment
             "activeTenants" => 0
         ];
 
-// total received revenue calculate
-
         $sql1 = "SELECT COALESCE(SUM(pay.amount), 0) AS total
                  FROM payment pay
-                 INNER JOIN booking b ON pay.bookingID = b.bookingID
-                 INNER JOIN property p ON b.propertyID = p.propertyID
+                 INNER JOIN booking b
+                    ON pay.bookingID = b.bookingID
+                 INNER JOIN property p
+                    ON b.propertyID = p.propertyID
                  WHERE p.ownerID = ?
                  AND UPPER(pay.status) = 'RECEIVED'";
 
@@ -32,13 +32,12 @@ class Payment
         $result1 = mysqli_stmt_get_result($stmt1);
         $summary["totalRevenue"] = (float)mysqli_fetch_assoc($result1)["total"];
 
-
-// Current month er total received revenue calculate 
-
         $sql2 = "SELECT COALESCE(SUM(pay.amount), 0) AS total
                  FROM payment pay
-                 INNER JOIN booking b ON pay.bookingID = b.bookingID
-                 INNER JOIN property p ON b.propertyID = p.propertyID
+                 INNER JOIN booking b
+                    ON pay.bookingID = b.bookingID
+                 INNER JOIN property p
+                    ON b.propertyID = p.propertyID
                  WHERE p.ownerID = ?
                  AND UPPER(pay.status) = 'RECEIVED'
                  AND YEAR(pay.paymentDate) = YEAR(CURDATE())
@@ -50,11 +49,10 @@ class Payment
         $result2 = mysqli_stmt_get_result($stmt2);
         $summary["thisMonth"] = (float)mysqli_fetch_assoc($result2)["total"];
 
-// tenant or client er total number count 
-
         $sql3 = "SELECT COUNT(DISTINCT b.clientID) AS total
                  FROM booking b
-                 INNER JOIN property p ON b.propertyID = p.propertyID
+                 INNER JOIN property p
+                    ON b.propertyID = p.propertyID
                  WHERE p.ownerID = ?
                  AND UPPER(b.status) = 'ACCEPTED'";
 
@@ -76,9 +74,12 @@ class Payment
                     pay.paymentDate,
                     pay.status
                 FROM payment pay
-                INNER JOIN booking b ON pay.bookingID = b.bookingID
-                INNER JOIN property p ON b.propertyID = p.propertyID
-                INNER JOIN users u ON b.clientID = u.userID
+                INNER JOIN booking b
+                    ON pay.bookingID = b.bookingID
+                INNER JOIN property p
+                    ON b.propertyID = p.propertyID
+                INNER JOIN users u
+                    ON b.clientID = u.userID
                 WHERE p.ownerID = ?
                 ORDER BY pay.paymentDate DESC";
 

@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__.'/../db/db.php';
 
+
 class User{
 
     public function establishConnection(){
@@ -64,5 +65,44 @@ class User{
         $stmt->bind_param('ss',$newPass,$email);
         return $stmt->execute();
     }
+
+
+    //SHEMA
+
+    public function getUserByEmail($email)
+    {
+        $conn=$this->establishConnection();
+        $sql = "SELECT * FROM users WHERE userEmail = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+
+        return $stmt->get_result()->fetch_assoc();
+    }
+
+    public function updatePassword($email, $password)
+    {
+        $conn=$this->establishConnection();
+        $sql = "UPDATE users SET userPassword = ? WHERE userEmail = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ss", $password, $email);
+
+        return $stmt->execute();
+    }
+
+    public function getClients()
+    {
+        $conn=$this->establishConnection();
+        $sql = "SELECT userID, userName, userEmail
+                FROM users
+                WHERE userRole = 'CLIENT'
+                ORDER BY userName";
+
+        $result = $conn->query($sql);
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
+
+
 ?>

@@ -8,22 +8,22 @@ if (isset($_SESSION['username'])) {
         require_once __DIR__ . '/View/adminDashboard.php';
 
     } 
-    // elseif ($_SESSION['userRole'] === 'manager') {
+    elseif ($_SESSION['userRole']=== 'manager')  {
 
-    //     require_once __DIR__ . '/View/managerHome.php';
+    require_once __DIR__ . '/View/ManagerDashboard.php';
 
-    // }
+}
     elseif ($_SESSION['userRole'] === 'owner') {
 
         require_once __DIR__ . '/View/ownerDashboard.php';
         // header('Location:View/ownerDashboard.php');
 
     }
-    //  else {
+     else {
 
-    //     require_once __DIR__ . '/View/clientHome.php';
+        require_once __DIR__ . '/Controller/dashboard-controller.php';
 
-    // }
+    }
 
 } else {
 
