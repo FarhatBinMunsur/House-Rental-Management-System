@@ -27,7 +27,6 @@ if (isset($_SESSION['username'])) {
 
 } else {
 
-    //kon page request krse
     if (isset($_GET['page'])) {
 
         if ($_GET['page'] === 'signup') {
