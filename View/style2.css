@@ -1,0 +1,211 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#fafbff;
+}
+
+.container{
+    display:flex;
+}
+
+.sidebar{
+    width:220px;
+    height:100vh;
+    background:white;
+    border-right:1px solid #eee;
+    position:fixed;
+    padding:25px 18px;
+}
+
+.logo{
+    margin-bottom:35px;
+}
+
+.logo h3{
+    font-size:15px;
+}
+
+.logo p{
+    font-size:8px;
+    color:#999;
+}
+
+.menu a{
+    text-decoration:none;
+}
+
+.menu p{
+    font-size:13px;
+    padding:10px;
+    color:#555;
+    margin-bottom:5px;
+}
+
+.menu p:hover{
+    background:#eef3ff;
+    color:#5274e8;
+    border-radius:6px;
+}
+
+.profile{
+    position:absolute;
+    bottom:25px;
+    left:18px;
+    display:flex;
+    align-items:center;
+    width:180px;
+    padding:6px;
+    border:1px solid #eee;
+    border-radius:8px;
+}
+
+.circle{
+    width:28px;
+    height:28px;
+    background:#5274e8;
+    color:white;
+    border-radius:50%;
+    text-align:center;
+    padding-top:7px;
+    font-size:10px;
+    margin-right:8px;
+}
+
+.main{
+    margin-left:220px;
+    padding:45px 25px;
+    width:100%;
+}
+
+.main h1{
+    font-size:20px;
+    margin-bottom:40px;
+}
+
+.dashboard-card{
+    width:360px;
+    height:500px;
+    background:#5270db;
+    border-radius:12px;
+    padding:55px 45px;
+    margin:auto;
+}
+
+.status-card{
+    width:240px;
+    height:80px;
+    background:white;
+    border-radius:10px;
+    padding:15px 20px;
+    margin-bottom:25px;
+}
+
+.post-filter{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.post-filter button{
+    border:1px solid #ddd;
+    background:white;
+    padding:8px 18px;
+    border-radius:20px;
+}
+
+.active-filter{
+    color:#5274e8;
+    border-color:#5274e8 !important;
+}
+
+.post-table-box,
+.payment-table-box,
+.notification-table,
+.notification-form{
+    background:white;
+    border:1px solid #eee;
+    border-radius:12px;
+    padding:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    height:40px;
+    font-size:11px;
+    color:#777;
+    text-align:left;
+}
+
+td{
+    height:45px;
+    font-size:12px;
+    border-top:1px solid #eee;
+}
+
+.approve{
+    background:#dff5e7;
+    color:#4c9b69;
+    padding:6px 12px;
+    border:none;
+    border-radius:15px;
+}
+
+.reject{
+    background:#f8dddd;
+    color:#b56b6b;
+    padding:6px 12px;
+    border:none;
+    border-radius:15px;
+}
+
+.payment-search{
+    width:100%;
+    padding:10px;
+    margin-bottom:18px;
+}
+
+.notification-form{
+    margin-bottom:20px;
+}
+
+.notification-form label{
+    display:block;
+    margin-top:12px;
+}
+
+.notification-form select,
+.notification-form input,
+.notification-form textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+}
+
+.notification-form textarea{
+    height:80px;
+}
+
+.notification-form button{
+    margin-top:15px;
+    float:right;
+    background:#5274e8;
+    color:white;
+    border:none;
+    padding:10px 20px;
+}
+
+.error{
+    color:red;
+    font-size:11px;
+    display:block;
+}
+
